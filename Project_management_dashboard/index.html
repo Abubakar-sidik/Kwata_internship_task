@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+      integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Project Management Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <!-- SIDEBAR -->
+      <aside class="side-bar">
+        <div class="title">
+          <div class="separator-icon">
+            <!-- Recreated project management icon -->
+            <svg
+              class="manage-svg"
+              xmlns="http://www.w3.org/2000/svg"
+              width="66"
+              height="67"
+              viewBox="0 0 66 67"
+              fill="none"
+            >
+              <path
+                d="M45.3832 12.5625V9.77083H39.8832V15.3542H12.3777V9.77083H6.87775V12.5625H4.125V62.8265H6.875V65.6181H42.6332V62.8265H39.8832V60.0348H42.6332V57.2431H39.8832V51.657H42.6332V48.8653H39.8832V46.0737H42.6332V43.282H45.3832V40.4875H48.1332V12.5653L45.3832 12.5625ZM34.3832 51.657H23.3805V46.0737H34.3805L34.3832 51.657ZM34.3832 60.032H9.625V57.2403H34.3832V60.032ZM9.625 23.7375H12.375V26.5292H15.125V23.7375H17.8777V20.9459H20.6277V23.7375H17.8777V26.5292H15.125L15.1277 29.3209H12.3777L12.375 26.5292H9.62775L9.625 23.7375ZM9.625 34.9042H12.375V37.6959H15.125V34.9042H17.8777V32.1125H20.6277V34.9042H17.8777V37.6959H15.125L15.1277 40.4903H12.3777V37.6987H9.62775L9.625 34.9042ZM12.375 46.0737V48.8653H15.125V46.0737H17.8777V43.282H20.6277V46.0737H17.8777V48.8653H15.125L15.1277 51.657H12.3777L12.375 48.8653H9.62775V46.0737H12.375ZM42.6332 37.6987H39.8832V40.4903H23.3805V34.907H42.6332V37.6987ZM42.6332 29.3237H23.3805V23.732H42.6332V29.3237Z"
+                fill="white"
+              />
+              <path
+                d="M64.6387 48.8625V46.0709H61.8887V43.2792H59.1387V46.0709H56.3887V43.2792H50.886V46.0709H48.136V43.2792H45.386V46.0709H42.636V48.8625H45.386V51.6542H42.636V57.2403H45.386V60.032H42.636V62.8237H45.386V65.6153H48.136V62.8237H50.886V65.6153H56.386V62.8237H59.136V65.6153H61.886V62.8237H64.6387V60.032H61.8887V57.2403H64.6387V51.657H61.8887V48.8653L64.6387 48.8625ZM56.3887 57.2403H50.886V51.657H56.386L56.3887 57.2403ZM37.1333 6.97917V12.5625H15.125V6.97917H17.875V4.1875H34.3778V6.97917H37.1333Z"
+                fill="white"
+              />
+            </svg>
+            <div class="s-bar"></div>
+          </div>
+          <h3>
+            PROJECT <br />MANAGEMENT<br /><span class="highlight"
+              >DASHBOARD</span
+            >
+          </h3>
+        </div>
+
+        <div class="side-bar-nav">
+          <button class="side-btn active">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="38"
+              height="40"
+              viewBox="0 0 38 40"
+              fill="none"
+            >
+              <path
+                d="M10 17.5H17.5V40H10V17.5ZM12.5 37.5H15V20H12.5V37.5ZM20 22.5H27.5V40H20V22.5ZM22.5 37.5H25V25H22.5V37.5ZM0 27.5H7.5V40H0V27.5ZM2.5 37.5H5V30H2.5V37.5ZM30 12.5H37.5V40H30V12.5ZM32.5 37.5H35V15H32.5V37.5ZM27.1289 12.1289C27.3763 12.6628 27.5 13.2031 27.5 13.75C27.5 14.2708 27.4023 14.7591 27.207 15.2148C27.0117 15.6706 26.7448 16.0677 26.4062 16.4062C26.0677 16.7448 25.6706 17.0117 25.2148 17.207C24.7591 17.4023 24.2708 17.5 23.75 17.5C23.2292 17.5 22.7409 17.4023 22.2852 17.207C21.8294 17.0117 21.4323 16.7448 21.0938 16.4062C20.7552 16.0677 20.4883 15.6706 20.293 15.2148C20.0977 14.7591 20 14.2708 20 13.75V13.5156C20 13.4375 20.0065 13.3594 20.0195 13.2812L16.3477 11.4453C16.0091 11.7839 15.612 12.0443 15.1562 12.2266C14.7005 12.4089 14.2318 12.5 13.75 12.5C13.2031 12.5 12.6628 12.3763 12.1289 12.1289L7.12891 17.1289C7.3763 17.6628 7.5 18.2031 7.5 18.75C7.5 19.2708 7.40234 19.7591 7.20703 20.2148C7.01172 20.6706 6.74479 21.0677 6.40625 21.4062C6.06771 21.7448 5.67057 22.0117 5.21484 22.207C4.75911 22.4023 4.27083 22.5 3.75 22.5C3.22917 22.5 2.74089 22.4023 2.28516 22.207C1.82943 22.0117 1.43229 21.7448 1.09375 21.4062C0.755208 21.0677 0.488281 20.6706 0.292969 20.2148C0.0976562 19.7591 0 19.2708 0 18.75C0 18.2292 0.0976562 17.7409 0.292969 17.2852C0.488281 16.8294 0.755208 16.4323 1.09375 16.0938C1.43229 15.7552 1.82943 15.4883 2.28516 15.293C2.74089 15.0977 3.22917 15 3.75 15C4.29688 15 4.83724 15.1237 5.37109 15.3711L10.3711 10.3711C10.1237 9.83724 10 9.29688 10 8.75C10 8.22917 10.0977 7.74089 10.293 7.28516C10.4883 6.82943 10.7552 6.43229 11.0938 6.09375C11.4323 5.75521 11.8294 5.48828 12.2852 5.29297C12.7409 5.09766 13.2292 5 13.75 5C14.2708 5 14.7591 5.09766 15.2148 5.29297C15.6706 5.48828 16.0677 5.75521 16.4062 6.09375C16.7448 6.43229 17.0117 6.82943 17.207 7.28516C17.4023 7.74089 17.5 8.22917 17.5 8.75V8.98438C17.5 9.0625 17.4935 9.14062 17.4805 9.21875L21.1523 11.0547C21.4909 10.7161 21.888 10.4557 22.3438 10.2734C22.7995 10.0911 23.2682 10 23.75 10C24.2969 10 24.8372 10.1237 25.3711 10.3711L30.3711 5.37109C30.1237 4.83724 30 4.29688 30 3.75C30 3.22917 30.0977 2.74089 30.293 2.28516C30.4883 1.82943 30.7552 1.43229 31.0938 1.09375C31.4323 0.755208 31.8294 0.488281 32.2852 0.292969C32.7409 0.0976562 33.2292 0 33.75 0C34.2708 0 34.7591 0.0976562 35.2148 0.292969C35.6706 0.488281 36.0677 0.755208 36.4062 1.09375C36.7448 1.43229 37.0117 1.82943 37.207 2.28516C37.4023 2.74089 37.5 3.22917 37.5 3.75C37.5 4.27083 37.4023 4.75911 37.207 5.21484C37.0117 5.67057 36.7448 6.06771 36.4062 6.40625C36.0677 6.74479 35.6706 7.01172 35.2148 7.20703C34.7591 7.40234 34.2708 7.5 33.75 7.5C33.2031 7.5 32.6628 7.3763 32.1289 7.12891L27.1289 12.1289ZM3.75 20C4.08854 20 4.38151 19.8763 4.62891 19.6289C4.8763 19.3815 5 19.0885 5 18.75C5 18.4115 4.8763 18.1185 4.62891 17.8711C4.38151 17.6237 4.08854 17.5 3.75 17.5C3.41146 17.5 3.11849 17.6237 2.87109 17.8711C2.6237 18.1185 2.5 18.4115 2.5 18.75C2.5 19.0885 2.6237 19.3815 2.87109 19.6289C3.11849 19.8763 3.41146 20 3.75 20ZM33.75 2.5C33.4115 2.5 33.1185 2.6237 32.8711 2.87109C32.6237 3.11849 32.5 3.41146 32.5 3.75C32.5 4.08854 32.6237 4.38151 32.8711 4.62891C33.1185 4.8763 33.4115 5 33.75 5C34.0885 5 34.3815 4.8763 34.6289 4.62891C34.8763 4.38151 35 4.08854 35 3.75C35 3.41146 34.8763 3.11849 34.6289 2.87109C34.3815 2.6237 34.0885 2.5 33.75 2.5ZM13.75 10C14.0885 10 14.3815 9.8763 14.6289 9.62891C14.8763 9.38151 15 9.08854 15 8.75C15 8.41146 14.8763 8.11849 14.6289 7.87109C14.3815 7.6237 14.0885 7.5 13.75 7.5C13.4115 7.5 13.1185 7.6237 12.8711 7.87109C12.6237 8.11849 12.5 8.41146 12.5 8.75C12.5 9.08854 12.6237 9.38151 12.8711 9.62891C13.1185 9.8763 13.4115 10 13.75 10ZM23.75 15C24.0885 15 24.3815 14.8763 24.6289 14.6289C24.8763 14.3815 25 14.0885 25 13.75C25 13.4115 24.8763 13.1185 24.6289 12.8711C24.3815 12.6237 24.0885 12.5 23.75 12.5C23.4115 12.5 23.1185 12.6237 22.8711 12.8711C22.6237 13.1185 22.5 13.4115 22.5 13.75C22.5 14.0885 22.6237 14.3815 22.8711 14.6289C23.1185 14.8763 23.4115 15 23.75 15Z"
+                fill="white"
+              />
+            </svg>
+            Dashboard
+          </button>
+          <button class="side-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+            >
+              <path
+                d="M26.6667 18.3333C29.4334 18.3333 31.6501 16.1 31.6501 13.3333C31.6501 10.5667 29.4334 8.33334 26.6667 8.33334C23.9001 8.33334 21.6667 10.5667 21.6667 13.3333C21.6667 16.1 23.9001 18.3333 26.6667 18.3333ZM13.3334 18.3333C16.1001 18.3333 18.3167 16.1 18.3167 13.3333C18.3167 10.5667 16.1001 8.33334 13.3334 8.33334C10.5667 8.33334 8.33342 10.5667 8.33342 13.3333C8.33342 16.1 10.5667 18.3333 13.3334 18.3333ZM13.3334 21.6667C9.45008 21.6667 1.66675 23.6167 1.66675 27.5V31.6667H25.0001V27.5C25.0001 23.6167 17.2167 21.6667 13.3334 21.6667ZM26.6667 21.6667C26.1834 21.6667 25.6334 21.7 25.0501 21.75C26.9834 23.15 28.3334 25.0333 28.3334 27.5V31.6667H38.3334V27.5C38.3334 23.6167 30.5501 21.6667 26.6667 21.6667Z"
+                fill="white"
+              />
+            </svg>
+            Visitors & Buyers
+          </button>
+          <button class="side-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+            >
+              <path
+                d="M20 37.5L38.4375 3.75H1.5625L20 37.5Z"
+                fill="white"
+              /></svg
+            >Sales funnel
+          </button>
+          <button class="side-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+            >
+              <path
+                d="M28.9851 4.66876C28.9852 4.08329 28.7528 3.52174 28.3389 3.10764C27.9251 2.69353 27.3636 2.4608 26.7782 2.46063C26.4883 2.46055 26.2012 2.51757 25.9334 2.62843C25.6655 2.73929 25.4221 2.90182 25.2171 3.10675C24.803 3.52062 24.5702 4.08204 24.5701 4.66751C24.5701 5.88626 26.7776 10.0013 26.7776 10.0013C26.7776 10.0013 28.9851 5.88751 28.9851 4.66876ZM25.7226 4.66876C25.7176 4.52724 25.7412 4.38618 25.7919 4.25397C25.8426 4.12177 25.9194 4.00112 26.0178 3.89923C26.1161 3.79734 26.2339 3.71628 26.3642 3.66089C26.4946 3.6055 26.6347 3.57691 26.7763 3.57683C26.9179 3.57674 27.0581 3.60517 27.1884 3.6604C27.3188 3.71564 27.4368 3.79655 27.5352 3.89833C27.6337 4.00011 27.7106 4.12066 27.7615 4.25281C27.8123 4.38495 27.8361 4.52599 27.8313 4.66751C27.8221 4.94087 27.707 5.19995 27.5104 5.39012C27.3138 5.58028 27.0511 5.68667 26.7775 5.68683C26.504 5.68699 26.2411 5.58092 26.0443 5.39099C25.8475 5.20106 25.7321 4.94211 25.7226 4.66876ZM31.6013 23.1188C30.9013 23.1188 30.2301 23.1775 29.6138 23.2725L13.8751 17.47C14.1251 17.245 14.2651 16.995 14.2651 16.7325C14.262 16.5941 14.2242 16.4587 14.1551 16.3388L24.6676 13.5413C25.2426 13.7125 25.9463 13.8163 26.7251 13.8163C28.6251 13.8163 30.1626 13.2113 30.1626 12.4638C30.1626 11.7138 28.6251 11.11 26.7251 11.11C24.8251 11.11 23.2876 11.7163 23.2876 12.4638C23.2892 12.5513 23.3117 12.6354 23.3551 12.7163L12.3701 15.25C11.4493 14.9889 10.4958 14.8614 9.53881 14.8713C6.93006 14.8713 4.81381 15.705 4.81381 16.7338C4.81381 17.7625 6.93006 18.5963 9.53881 18.5963C10.2563 18.5963 10.9263 18.5275 11.5363 18.415L26.5238 24.4975C26.2863 24.7375 26.1413 24.9975 26.1413 25.2763C26.1413 25.5138 26.2613 25.7313 26.4363 25.9425L10.8688 31.7688C10.6721 31.7613 10.4734 31.7571 10.2726 31.7563C6.22256 31.7563 2.93506 33.0513 2.93506 34.6438C2.93506 36.24 6.22256 37.535 10.2726 37.535C14.3226 37.535 17.6101 36.2425 17.6101 34.645C17.6101 34.37 17.5063 34.105 17.3226 33.8538L30.1551 27.3363C30.6176 27.3863 31.0963 27.4175 31.5988 27.4175C34.6151 27.4175 37.0613 26.455 37.0613 25.2638C37.0613 24.0838 34.6151 23.1188 31.5988 23.1188H31.6013Z"
+                fill="white"
+              /></svg
+            >Roadmap
+          </button>
+          <button class="side-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+            >
+              <path
+                d="M22.84 11.4817L31.945 18.6333C32.0442 18.7113 32.1243 18.8108 32.1794 18.9243C32.2345 19.0377 32.2632 19.1622 32.2632 19.2883C32.2632 19.4145 32.2345 19.539 32.1794 19.6524C32.1243 19.7659 32.0442 19.8654 31.945 19.9433L22.84 27.0967C22.7071 27.2011 22.5456 27.2627 22.3769 27.2732C22.2082 27.2837 22.0403 27.2427 21.8954 27.1555C21.7506 27.0684 21.6357 26.9392 21.566 26.7852C21.4962 26.6312 21.475 26.4597 21.505 26.2933L22.0967 23.035C13.7367 21.0283 10.25 25.525 8.90671 28.4267C8.71004 28.85 7.88337 28.7683 7.84004 28.305C6.76504 16.3033 14.6434 14.565 22.1234 15.6933L21.505 12.2833C21.4749 12.1171 21.496 11.9457 21.5655 11.7918C21.6351 11.6379 21.7497 11.5087 21.8943 11.4214C22.0389 11.3341 22.2066 11.2928 22.3752 11.303C22.5438 11.3131 22.7053 11.3743 22.8384 11.4783"
+                fill="white"
+              />
+              <path
+                d="M22.84 11.4817L31.945 18.6333C32.0442 18.7113 32.1243 18.8108 32.1794 18.9243C32.2345 19.0377 32.2632 19.1622 32.2632 19.2883C32.2632 19.4145 32.2345 19.539 32.1794 19.6524C32.1243 19.7659 32.0442 19.8654 31.945 19.9433L22.84 27.0967C22.7071 27.2011 22.5456 27.2627 22.3769 27.2732C22.2082 27.2837 22.0403 27.2427 21.8954 27.1555C21.7506 27.0684 21.6357 26.9392 21.566 26.7852C21.4962 26.6312 21.475 26.4597 21.505 26.2933L22.0967 23.035C13.7367 21.0283 10.25 25.525 8.90671 28.4267C8.71004 28.85 7.88337 28.7683 7.84004 28.305C6.76504 16.3033 14.6434 14.565 22.1234 15.6933L21.505 12.2833C21.4749 12.1171 21.496 11.9457 21.5655 11.7918C21.6351 11.6379 21.7497 11.5087 21.8943 11.4214C22.0389 11.3341 22.2066 11.2928 22.3752 11.303C22.5438 11.3131 22.7053 11.3743 22.8384 11.4783"
+                stroke="white"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+            >Sales Volume
+          </button>
+        </div>
+
+        <div class="calendar-panel">
+          <div class="years">
+            <span class="year">2025</span>
+            <span class="year">2026</span>
+            <span class="year active">2027</span>
+            <span class="year">2028</span>
+          </div>
+          <div class="months">
+            <span class="month">JAN</span>
+            <span class="month">FEB</span>
+            <span class="month">MAR</span>
+            <span class="month">APR</span>
+            <span class="month active">MAY</span>
+            <span class="month active">JUN</span>
+            <span class="month active">JUL</span>
+            <span class="month active">AUG</span>
+            <span class="month active">SEP</span>
+            <span class="month active">OCT</span>
+            <span class="month active">NOV</span>
+            <span class="month">DEC</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- MAIN CONTAINER -->
+      <section class="container">
+        <!-- Top Metric Cards Row (Row 1) -->
+        <section class="section1">
+          <div class="vb-card card">
+            <p>Visitors & Buyers</p>
+            <h3>59156</h3>
+            <div class="card-wave">
+              <svg
+                class="card-wave"
+                xmlns="http://www.w3.org/2000/svg"
+                width="228"
+                height="73"
+                viewBox="0 0 228 73"
+                fill="none"
+              >
+                <path
+                  d="M27.7636 18.04H0L5.5 73H221L227.5 10.4066C227.5 10.4066 203.637 -1.80671 174.487 0.22885C145.337 2.26441 131.733 26.6911 112.785 25.6733C93.8377 24.6555 84.561 10.4066 69.5 10.4066C54.439 10.4066 36.0229 18.04 27.7636 18.04Z"
+                  fill="url(#paint0_linear_26_156)"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_26_156"
+                    x1="74.89"
+                    y1="36.64"
+                    x2="225.5"
+                    y2="36.5124"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#14BEFB" />
+                    <stop offset="1" stop-color="#1F8DFC" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+          </div>
+
+          <div class="sf-card card">
+            <div class="card-header-row">
+              <p>Sales Funnel</p>
+              <h3>26%</h3>
+            </div>
+            <div class="funnel-display">
+              <svg class="funnel-svg" viewBox="0 0 100 60">
+                <polygon
+                  points="10,5 90,5 50,55"
+                  fill="none"
+                  stroke="#ffffff"
+                  stroke-width="3"
+                />
+                <line
+                  x1="20"
+                  y1="15"
+                  x2="80"
+                  y2="15"
+                  stroke="#ffffff"
+                  stroke-width="2"
+                />
+                <line
+                  x1="30"
+                  y1="28"
+                  x2="70"
+                  y2="28"
+                  stroke="#ffffff"
+                  stroke-width="2"
+                />
+                <line
+                  x1="40"
+                  y1="41"
+                  x2="60"
+                  y2="41"
+                  stroke="#ffffff"
+                  stroke-width="2"
+                />
+              </svg>
+              <div class="funnel-label">
+                <span>Buyers</span>
+                <span class="bold">48%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="roadmap-card card">
+            <p>Roadmap</p>
+            <h3>November</h3>
+            <div class="roadmap-subtext">
+              <span>Tasks</span>
+              <span>Adapt</span>
+            </div>
+          </div>
+
+          <div class="sv-card card">
+            <p>Sales Volume</p>
+            <h3>$662,570</h3>
+          </div>
+        </section>
+
+        <section class="section2">
+          <div class="visitor-buyers-graph card">
+            <div class="graph-header">
+              <span class="graph-title">Visitors & Buyers</span>
+              <div class="legend-item">
+                <span class="small-circle gray"></span> Visitors 59156
+              </div>
+              <div class="legend-item">
+                <span class="small-circle teal"></span> Buyer 28287
+              </div>
+              <div class="legend-item">
+                <span class="small-circle orange"></span> Return 11073
+              </div>
+            </div>
+
+            <div class="hybrid-chart">
+              <!-- Bar chart backdrop -->
+              <div class="chart-bars">
+                <div class="bar-col">
+                  <div class="bar" style="height: 48%"></div>
+                </div>
+                <div class="bar-col">
+                  <div class="bar" style="height: 52%"></div>
+                </div>
+                <div class="bar-col">
+                  <div class="bar" style="height: 42%"></div>
+                </div>
+                <div class="bar-col">
+                  <div class="bar" style="height: 60%; z-index: 10000"></div>
+                </div>
+                <div class="bar-col">
+                  <div
+                    class="bar active-bar"
+                    style="height: 55%; z-index: 10000"
+                  ></div>
+                </div>
+                <div class="bar-col">
+                  <div
+                    class="bar active-bar"
+                    style="height: 48%; z-index: 10000"
+                  ></div>
+                </div>
+                <div class="bar-col">
+                  <div
+                    class="bar active-bar"
+                    style="height: 46%; z-index: 10000"
+                  ></div>
+                </div>
+                <div class="bar-col">
+                  <div
+                    class="bar active-bar"
+                    style="height: 40%; z-index: 10000"
+                  ></div>
+                </div>
+                <div class="bar-col">
+                  <div
+                    class="bar active-bar"
+                    style="height: 58%; z-index: 10000"
+                  ></div>
+                </div>
+                <div class="bar-col">
+                  <div
+                    class="bar active-bar"
+                    style="height: 62%; z-index: 10000"
+                  ></div>
+                </div>
+                <div class="bar-col">
+                  <div
+                    class="bar active-bar"
+                    style="height: 72%; z-index: 10000"
+                  ></div>
+                </div>
+                <div class="bar-col">
+                  <div class="bar" style="height: 55%"></div>
+                </div>
+              </div>
+
+              <!-- Smooth Wave Line AND its correct Orange Gradient Underfill -->
+              <svg
+                class="line-overlay"
+                xmlns="http://www.w3.org/2000/svg"
+                width="624"
+                height="232"
+                viewBox="0 0 624 232"
+                fill="none"
+              >
+                <path
+                  d="M68 68.2469C52.5 71.2469 0 53.2469 0 53.2469V231.247H623.5V36.2469C623.5 36.2469 548 5.24687 516 0.246872C484 -4.75313 391 67.7469 339.5 77.2469C288 86.7469 197.5 24.2469 178 28.2469C158.5 32.2469 83.5 65.2469 68 68.2469Z"
+                  fill="url(#paint0_linear_26_145) " 
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_26_145"
+                    x1="311.5"
+                    y1="74.2469"
+                    x2="311.5"
+                    y2="157.747"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#F3DAD3" />
+                    <stop offset="1" stop-color="#E5E9EC" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+
+            <div class="horizontal-months">
+              <span>JAN</span><span>FEB</span><span>MAR</span><span>APR</span
+              ><span>MAY</span><span>JUN</span><span>JUL</span><span>AUG</span
+              ><span>SEP</span><span>OCT</span><span>NOV</span><span>DEC</span>
+            </div>
+          </div>
+
+          <!-- Conversion Card with perfectly flat-end multi-segment donut ring -->
+          <div class="conversion-card card">
+            <h4>Conversion</h4>
+            <div class="circular-progress">
+              <svg
+                class="donut"
+                xmlns="http://www.w3.org/2000/svg"
+                width="239"
+                height="235"
+                viewBox="0 0 239 235"
+                fill="none"
+              >
+                <path
+                  d="M117.5 0C101.336 -1.92758e-07 85.3452 3.33519 70.5286 9.797C55.712 16.2588 42.3881 25.7082 31.39 37.5543C20.392 49.4003 11.9564 63.3882 6.61091 78.6431C1.26541 93.898 -0.875053 110.092 0.323387 126.212C1.52183 142.331 6.0334 158.031 13.5759 172.327C21.1185 186.624 31.5297 199.211 44.1586 209.3C56.7874 219.39 71.3622 226.765 86.9715 230.965C102.581 235.165 118.889 236.099 134.875 233.708L127.204 182.401C118.275 183.736 109.168 183.214 100.45 180.869C91.7327 178.523 83.5928 174.404 76.5398 168.769C69.4867 163.134 63.6722 156.105 59.4598 148.12C55.2474 140.136 52.7277 131.368 52.0584 122.365C51.3891 113.363 52.5845 104.319 55.5699 95.7989C58.5553 87.2793 63.2664 79.4672 69.4087 72.8514C75.551 66.2355 82.9922 60.9581 91.2671 57.3493C99.542 53.7405 108.472 51.8778 117.5 51.8778V0Z"
+                  fill="url(#paint0_linear_17_1007)"
+                />
+                <path
+                  d="M119.5 0C136.993 -2.08599e-07 154.265 3.90573 170.055 11.4321C185.846 18.9585 199.757 29.9157 210.773 43.504C221.79 57.0922 229.633 72.9687 233.73 89.9746C237.828 106.981 238.077 124.687 234.46 141.801L184.66 131.274C186.711 121.574 186.569 111.538 184.247 101.898C181.924 92.2593 177.479 83.2604 171.235 75.5584C164.991 67.8565 157.106 61.6459 148.155 57.3799C139.205 53.1138 129.415 50.9 119.5 50.9V0Z"
+                  fill="url(#paint1_linear_17_1007)"
+                />
+                <path
+                  d="M236.594 141.157C231.664 165.143 219.363 186.989 201.411 203.643C183.458 220.296 160.752 230.925 136.464 234.043L129.924 183.111C143.598 181.355 156.381 175.372 166.488 165.996C176.594 156.621 183.519 144.322 186.295 130.818L236.594 141.157Z"
+                  fill="url(#paint2_linear_17_1007)"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_17_1007"
+                    x1="41.5"
+                    y1="92"
+                    x2="117.5"
+                    y2="235"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#FB9C1A" />
+                    <stop offset="1" stop-color="#D75020" />
+                  </linearGradient>
+                  <linearGradient
+                    id="paint1_linear_17_1007"
+                    x1="119.5"
+                    y1="-5.03659e-06"
+                    x2="204"
+                    y2="60"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#008D7A" />
+                    <stop offset="1" stop-color="#00A490" />
+                  </linearGradient>
+                  <linearGradient
+                    id="paint2_linear_17_1007"
+                    x1="239"
+                    y1="41.5"
+                    x2="137"
+                    y2="218.5"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0.573198" stop-color="#1F7EEC" />
+                    <stop offset="1" stop-color="#094A87" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              <!-- Labeled layers within donut hole -->
+              <div class="donut-label">
+                <span class="label-sm">Buyers</span>
+                <span class="label-lg">48%</span>
+              </div>
+              <div class="conversion-percentage-badge">
+                <span>19%</span>
+              </div>
+            </div>
+            <div class="conversion-legend">
+              <span class="small-circle light-gray"></span>
+              <span>New</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Bottom KPIs and Area Chart Row (Row 3) -->
+        <section class="section3">
+          <div class="top-managers card">
+            <div class="managers-header">
+              <h4>Top 3 Sales Managers</h4>
+              <h4>KPI Plan</h4>
+              <h4>Sales volume</h4>
+            </div>
+
+            <div class="management-info">
+              <span class="rank">Top 1</span>
+              <div class="avatar">
+                <img
+                  class="avatar"
+                  src="./images/avater.jpg"
+                  alt="top manager profile"
+                />
+              </div>
+              <div class="top-manager-info-text">
+                <div class="top-manager-name-percent">
+                  <span id="name">Sophia Reynolds</span>
+                  <span id="percent">42%</span>
+                  <span id="amount">$145,811</span>
+                </div>
+                <div class="Manager-bar m1"></div>
+              </div>
+            </div>
+            <div class="management-info">
+              <span class="rank">Top 2</span>
+              <div class="avatar">
+                <img
+                  class="avatar"
+                  src="./images/avater.jpg"
+                  alt="top manager profile"
+                />
+              </div>
+              <div class="top-manager-info-text">
+                <div class="top-manager-name-percent">
+                  <span id="name">Ethan Parker</span>
+                  <span id="percent">31%</span>
+                  <span id="amount">$109,977</span>
+                </div>
+                <div class="Manager-bar m2"></div>
+              </div>
+            </div>
+            <div class="management-info">
+              <span class="rank">Top 3</span>
+              <div class="avatar">
+                <img
+                  class="avatar"
+                  src="./images/avater.jpg"
+                  alt="top manager profile"
+                />
+              </div>
+              <div class="top-manager-info-text">
+                <div class="top-manager-name-percent">
+                  <span id="name">Lucas Bannet</span>
+                  <span id="percent">30%</span>
+                  <span id="amount">$106,469</span>
+                </div>
+                <div class="Manager-bar m3"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Twin Smooth Area charts (Sales vs Purchase) -->
+          <div class="sales-volume card">
+            <div class="sales-vol-header">
+              <span>Sales Volume</span>
+              <div class="legend-row">
+                <div class="legend-item">
+                  <span class="small-circle lightblue"></span> Sales
+                  <strong>$562.6K</strong>
+                </div>
+                <div class="legend-item">
+                  <span class="small-circle lightgreen"></span> Purchase
+                  <strong>$536.5K</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="volume-chart-container">
+              <div class="side-amount">
+                <span>120K</span>
+                <span>100K</span>
+                <span>80K</span>
+                <span>60K</span>
+                <span>40K</span>
+                <span>20K</span>
+              </div>
+              <div class="graph-display">
+                <svg
+                  class="area-chart"
+                  viewBox="0 0 500 150"
+                  preserveAspectRatio="none"
+                >
+                  <defs>
+                    <linearGradient id="cyan-area" x1="0" y1="0" x2="0" y2="1">
+                      <stop
+                        offset="0%"
+                        stop-color="#00f2fe"
+                        stop-opacity="0.3"
+                      />
+                      <stop
+                        offset="100%"
+                        stop-color="#00f2fe"
+                        stop-opacity="0.0"
+                      />
+                    </linearGradient>
+                    <linearGradient id="blue-area" x1="0" y1="0" x2="0" y2="1">
+                      <stop
+                        offset="0%"
+                        stop-color="#2265cf"
+                        stop-opacity="0.2"
+                      />
+                      <stop
+                        offset="100%"
+                        stop-color="#2265cf"
+                        stop-opacity="0.0"
+                      />
+                    </linearGradient>
+                  </defs>
+                  <!-- Purchase Area (Blue spline underneath) -->
+                  <path
+                    d="M 0,110 Q 120,40 240,110 T 480,60 L 500,80 L 500,150 L 0,150 Z"
+                    fill="url(#blue-area)"
+                  />
+                  <path
+                    d="M 0,110 Q 120,40 240,110 T 480,60 L 500,80"
+                    fill="none"
+                    stroke="#2265cf"
+                    stroke-width="2"
+                  />
+
+                  <!-- Sales Area (Cyan spline on top) -->
+                  <path
+                    d="M 0,125 Q 110,30 220,105 T 440,40 L 500,60 L 500,150 L 0,150 Z"
+                    fill="url(#cyan-area)"
+                  />
+                  <path
+                    d="M 0,125 Q 110,30 220,105 T 440,40 L 500,60"
+                    fill="none"
+                    stroke="#00f2fe"
+                    stroke-width="3"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <div class="horizontal-months minified">
+              <span>JAN</span><span>FEB</span><span>MAR</span><span>APR</span
+              ><span>MAY</span><span>JUN</span><span>JUL</span><span>AUG</span
+              ><span>SEP</span><span>OCT</span>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
