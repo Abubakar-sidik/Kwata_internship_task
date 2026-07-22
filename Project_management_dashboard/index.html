@@ -60,7 +60,7 @@
                 fill="white"
               />
             </svg>
-            Dashboard
+            <span>Dashboard</span>
           </button>
           <button class="side-btn">
             <svg
@@ -75,7 +75,7 @@
                 fill="white"
               />
             </svg>
-            Visitors & Buyers
+            <span>Visitors & Buyers</span>
           </button>
           <button class="side-btn">
             <svg
@@ -85,11 +85,9 @@
               viewBox="0 0 40 40"
               fill="none"
             >
-              <path
-                d="M20 37.5L38.4375 3.75H1.5625L20 37.5Z"
-                fill="white"
-              /></svg
-            >Sales funnel
+              <path d="M20 37.5L38.4375 3.75H1.5625L20 37.5Z" fill="white" />
+            </svg>
+           <span> Sales funnel</span>
           </button>
           <button class="side-btn">
             <svg
@@ -102,8 +100,9 @@
               <path
                 d="M28.9851 4.66876C28.9852 4.08329 28.7528 3.52174 28.3389 3.10764C27.9251 2.69353 27.3636 2.4608 26.7782 2.46063C26.4883 2.46055 26.2012 2.51757 25.9334 2.62843C25.6655 2.73929 25.4221 2.90182 25.2171 3.10675C24.803 3.52062 24.5702 4.08204 24.5701 4.66751C24.5701 5.88626 26.7776 10.0013 26.7776 10.0013C26.7776 10.0013 28.9851 5.88751 28.9851 4.66876ZM25.7226 4.66876C25.7176 4.52724 25.7412 4.38618 25.7919 4.25397C25.8426 4.12177 25.9194 4.00112 26.0178 3.89923C26.1161 3.79734 26.2339 3.71628 26.3642 3.66089C26.4946 3.6055 26.6347 3.57691 26.7763 3.57683C26.9179 3.57674 27.0581 3.60517 27.1884 3.6604C27.3188 3.71564 27.4368 3.79655 27.5352 3.89833C27.6337 4.00011 27.7106 4.12066 27.7615 4.25281C27.8123 4.38495 27.8361 4.52599 27.8313 4.66751C27.8221 4.94087 27.707 5.19995 27.5104 5.39012C27.3138 5.58028 27.0511 5.68667 26.7775 5.68683C26.504 5.68699 26.2411 5.58092 26.0443 5.39099C25.8475 5.20106 25.7321 4.94211 25.7226 4.66876ZM31.6013 23.1188C30.9013 23.1188 30.2301 23.1775 29.6138 23.2725L13.8751 17.47C14.1251 17.245 14.2651 16.995 14.2651 16.7325C14.262 16.5941 14.2242 16.4587 14.1551 16.3388L24.6676 13.5413C25.2426 13.7125 25.9463 13.8163 26.7251 13.8163C28.6251 13.8163 30.1626 13.2113 30.1626 12.4638C30.1626 11.7138 28.6251 11.11 26.7251 11.11C24.8251 11.11 23.2876 11.7163 23.2876 12.4638C23.2892 12.5513 23.3117 12.6354 23.3551 12.7163L12.3701 15.25C11.4493 14.9889 10.4958 14.8614 9.53881 14.8713C6.93006 14.8713 4.81381 15.705 4.81381 16.7338C4.81381 17.7625 6.93006 18.5963 9.53881 18.5963C10.2563 18.5963 10.9263 18.5275 11.5363 18.415L26.5238 24.4975C26.2863 24.7375 26.1413 24.9975 26.1413 25.2763C26.1413 25.5138 26.2613 25.7313 26.4363 25.9425L10.8688 31.7688C10.6721 31.7613 10.4734 31.7571 10.2726 31.7563C6.22256 31.7563 2.93506 33.0513 2.93506 34.6438C2.93506 36.24 6.22256 37.535 10.2726 37.535C14.3226 37.535 17.6101 36.2425 17.6101 34.645C17.6101 34.37 17.5063 34.105 17.3226 33.8538L30.1551 27.3363C30.6176 27.3863 31.0963 27.4175 31.5988 27.4175C34.6151 27.4175 37.0613 26.455 37.0613 25.2638C37.0613 24.0838 34.6151 23.1188 31.5988 23.1188H31.6013Z"
                 fill="white"
-              /></svg
-            >Roadmap
+              />
+            </svg>
+            <span>Roadmap</span>
           </button>
           <button class="side-btn">
             <svg
@@ -122,8 +121,9 @@
                 stroke="white"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-              /></svg
-            >Sales Volume
+              />
+            </svg>
+            <span>Sales Volume</span>
           </button>
         </div>
 
@@ -156,8 +156,12 @@
         <!-- Top Metric Cards Row (Row 1) -->
         <section class="section1">
           <div class="vb-card card">
-            <p>Visitors & Buyers</p>
+            <div class="card-header-row">
+              <p>Visitors & Buyers</p>
             <h3>59156</h3>
+            </div>
+            
+            
             <div class="card-wave">
               <svg
                 class="card-wave"
@@ -191,60 +195,169 @@
           <div class="sf-card card">
             <div class="card-header-row">
               <p>Sales Funnel</p>
-              <h3>26%</h3>
+              <h3 class="h4-h" >26%</h3>
             </div>
             <div class="funnel-display">
-              <svg class="funnel-svg" viewBox="0 0 100 60">
-                <polygon
-                  points="10,5 90,5 50,55"
-                  fill="none"
-                  stroke="#ffffff"
-                  stroke-width="3"
-                />
-                <line
-                  x1="20"
-                  y1="15"
-                  x2="80"
-                  y2="15"
-                  stroke="#ffffff"
-                  stroke-width="2"
-                />
-                <line
-                  x1="30"
-                  y1="28"
-                  x2="70"
-                  y2="28"
-                  stroke="#ffffff"
-                  stroke-width="2"
-                />
-                <line
-                  x1="40"
-                  y1="41"
-                  x2="60"
-                  y2="41"
-                  stroke="#ffffff"
-                  stroke-width="2"
-                />
-              </svg>
               <div class="funnel-label">
-                <span>Buyers</span>
-                <span class="bold">48%</span>
+                <div class="funnel-bars">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="145"
+                    height="94"
+                    viewBox="0 0 145 94"
+                    fill="none"
+                  >
+                    <path
+                      d="M0 0H145L129.58 15.365H12.5591L0 0Z"
+                      fill="#D9D9D9"
+                    />
+                    <path d="M0 0H61.6535V15.365H13.1299L0 0Z" fill="#05606F" />
+                    <path
+                      d="M15.9844 19.4623H127.874L115.975 34.8273H27.9726L15.9844 19.4623Z"
+                      fill="#D9D9D9"
+                    />
+                    <path
+                      d="M15.9844 19.4623H79.9214L79.9214 34.8273H22.8348L15.9844 19.4623Z"
+                      fill="#05606F"
+                    />
+                    <path
+                      d="M28.5435 38.9246H113.032L104.047 54.2896H42.9954L28.5435 38.9246Z"
+                      fill="#D9D9D9"
+                    />
+                    <path
+                      d="M28.5435 38.9246H91.3387V54.2896H39.2848L28.5435 38.9246Z"
+                      fill="#05606F"
+                    />
+                    <path
+                      d="M43.3857 58.387H101.614L92.4802 73.752H54.2322L43.3857 58.387Z"
+                      fill="#05606F"
+                    />
+                    <path
+                      d="M55.9448 77.8493H91.3385L81.0629 93.2143H67.3621L55.9448 77.8493Z"
+                      fill="#05606F"
+                    />
+                  </svg>
+                </div>
+
+                <div>
+                  <h3>26%</h3>
+                  <span>Buyers</span>
+                  <span class="bold">48%</span>
+                  
+                </div>
               </div>
             </div>
           </div>
 
           <div class="roadmap-card card">
-            <p>Roadmap</p>
+            <div class="card-header-row">
+              <p>Roadmap</p>
             <h3>November</h3>
+            </div>
+            
             <div class="roadmap-subtext">
-              <span>Tasks</span>
-              <span>Adapt</span>
+                            <div class="roadmap-wave">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="153"
+                  height="88"
+                  viewBox="0 0 153 88"
+                  fill="none"
+                >
+                  <g filter="url(#filter0_dfg_98_223)">
+                    <path
+                      d="M82 41C82 30.6566 77.8911 20.7368 70.5772 13.4228C63.2632 6.10892 53.3434 2 43 2C32.6566 2 22.7368 6.10891 15.4228 13.4228C8.10892 20.7367 4 30.6566 4 41L15.8488 41C15.8488 33.799 18.7094 26.893 23.8012 21.8012C28.893 16.7094 35.7991 13.8488 43 13.8488C50.2009 13.8488 57.107 16.7094 62.1988 21.8012C67.2906 26.893 70.1512 33.7991 70.1512 41H82Z"
+                      fill="#C7A1D9"
+                    />
+                    <path
+                      d="M125.117 76.6248C119.153 79.2816 112.618 80.3987 106.111 79.8737C99.603 79.3487 93.3313 77.1985 87.8706 73.62C82.4098 70.0416 77.9348 65.1495 74.8559 59.3924C71.7769 53.6353 70.1925 47.1973 70.248 40.6688L82.0964 40.7694C82.0578 45.3145 83.1608 49.7965 85.3043 53.8045C87.4478 57.8125 90.5633 61.2183 94.3649 63.7096C98.1666 66.2008 102.533 67.6978 107.063 68.0633C111.594 68.4288 116.144 67.651 120.295 65.8014L125.117 76.6248Z"
+                      fill="#C7A1D9"
+                    />
+                    <path
+                      d="M142.003 62.1663C137.723 68.7905 131.534 73.9614 124.255 76.9965L119.695 66.0602C124.763 63.9472 129.071 60.3473 132.051 55.7356L142.003 62.1663Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M148.247 41C148.247 48.5433 146.059 55.9248 141.949 62.25L132.013 55.7939C134.875 51.3904 136.398 46.2515 136.398 41H148.247Z"
+                      fill="#655CD9"
+                    />
+                  </g>
+                  <defs>
+                    <filter
+                      id="filter0_dfg_98_223"
+                      x="0"
+                      y="0"
+                      width="152.247"
+                      height="88"
+                      filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feColorMatrix
+                        in="SourceAlpha"
+                        type="matrix"
+                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        result="hardAlpha"
+                      />
+                      <feOffset dy="4" />
+                      <feGaussianBlur stdDeviation="2" />
+                      <feComposite in2="hardAlpha" operator="out" />
+                      <feColorMatrix
+                        type="matrix"
+                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in2="BackgroundImageFix"
+                        result="effect1_dropShadow_98_223"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="effect1_dropShadow_98_223"
+                        result="shape"
+                      />
+                      <feGaussianBlur
+                        stdDeviation="1"
+                        result="effect2_foregroundBlur_98_223"
+                      />
+                      <feTurbulence
+                        type="fractalNoise"
+                        baseFrequency="0.99900001287460327 0.99900001287460327"
+                        numOctaves="3"
+                        seed="9295"
+                      />
+                      <feDisplacementMap
+                        in="effect2_foregroundBlur_98_223"
+                        scale="2"
+                        xChannelSelector="R"
+                        yChannelSelector="G"
+                        result="displacedImage"
+                        width="100%"
+                        height="100%"
+                      />
+                      <feMerge result="effect3_texture_98_223">
+                        <feMergeNode in="displacedImage" />
+                      </feMerge>
+                    </filter>
+                  </defs>
+                </svg>
+              </div>
+
+              <div>
+                <span>Tasks</span>
+                <span>Adapt</span>
+              </div>
             </div>
           </div>
 
           <div class="sv-card card">
-            <p>Sales Volume</p>
+            <div class="card-header-row">
+              <p>Sales Volume</p>
             <h3>$662,570</h3>
+            </div>
+            
+            
           </div>
         </section>
 
@@ -264,164 +377,21 @@
             </div>
 
             <div class="hybrid-chart">
-              <!-- Bar chart backdrop -->
-              <div class="chart-bars">
-                <div class="bar-col">
-                  <div class="bar" style="height: 48%"></div>
-                </div>
-                <div class="bar-col">
-                  <div class="bar" style="height: 52%"></div>
-                </div>
-                <div class="bar-col">
-                  <div class="bar" style="height: 42%"></div>
-                </div>
-                <div class="bar-col">
-                  <div class="bar" style="height: 60%; z-index: 10000"></div>
-                </div>
-                <div class="bar-col">
-                  <div
-                    class="bar active-bar"
-                    style="height: 55%; z-index: 10000"
-                  ></div>
-                </div>
-                <div class="bar-col">
-                  <div
-                    class="bar active-bar"
-                    style="height: 48%; z-index: 10000"
-                  ></div>
-                </div>
-                <div class="bar-col">
-                  <div
-                    class="bar active-bar"
-                    style="height: 46%; z-index: 10000"
-                  ></div>
-                </div>
-                <div class="bar-col">
-                  <div
-                    class="bar active-bar"
-                    style="height: 40%; z-index: 10000"
-                  ></div>
-                </div>
-                <div class="bar-col">
-                  <div
-                    class="bar active-bar"
-                    style="height: 58%; z-index: 10000"
-                  ></div>
-                </div>
-                <div class="bar-col">
-                  <div
-                    class="bar active-bar"
-                    style="height: 62%; z-index: 10000"
-                  ></div>
-                </div>
-                <div class="bar-col">
-                  <div
-                    class="bar active-bar"
-                    style="height: 72%; z-index: 10000"
-                  ></div>
-                </div>
-                <div class="bar-col">
-                  <div class="bar" style="height: 55%"></div>
-                </div>
-              </div>
-
-              <!-- Smooth Wave Line AND its correct Orange Gradient Underfill -->
-              <svg
-                class="line-overlay"
-                xmlns="http://www.w3.org/2000/svg"
-                width="624"
-                height="232"
-                viewBox="0 0 624 232"
-                fill="none"
-              >
-                <path
-                  d="M68 68.2469C52.5 71.2469 0 53.2469 0 53.2469V231.247H623.5V36.2469C623.5 36.2469 548 5.24687 516 0.246872C484 -4.75313 391 67.7469 339.5 77.2469C288 86.7469 197.5 24.2469 178 28.2469C158.5 32.2469 83.5 65.2469 68 68.2469Z"
-                  fill="url(#paint0_linear_26_145) " 
-                />
-                <defs>
-                  <linearGradient
-                    id="paint0_linear_26_145"
-                    x1="311.5"
-                    y1="74.2469"
-                    x2="311.5"
-                    y2="157.747"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stop-color="#F3DAD3" />
-                    <stop offset="1" stop-color="#E5E9EC" />
-                  </linearGradient>
-                </defs>
-              </svg>
+              <div class="chart" id="chart"></div>
             </div>
-
-            <div class="horizontal-months">
+          </div>
+            <!-- <div class="horizontal-months">
               <span>JAN</span><span>FEB</span><span>MAR</span><span>APR</span
               ><span>MAY</span><span>JUN</span><span>JUL</span><span>AUG</span
               ><span>SEP</span><span>OCT</span><span>NOV</span><span>DEC</span>
             </div>
-          </div>
+          </div> -->
 
           <!-- Conversion Card with perfectly flat-end multi-segment donut ring -->
           <div class="conversion-card card">
             <h4>Conversion</h4>
             <div class="circular-progress">
-              <svg
-                class="donut"
-                xmlns="http://www.w3.org/2000/svg"
-                width="239"
-                height="235"
-                viewBox="0 0 239 235"
-                fill="none"
-              >
-                <path
-                  d="M117.5 0C101.336 -1.92758e-07 85.3452 3.33519 70.5286 9.797C55.712 16.2588 42.3881 25.7082 31.39 37.5543C20.392 49.4003 11.9564 63.3882 6.61091 78.6431C1.26541 93.898 -0.875053 110.092 0.323387 126.212C1.52183 142.331 6.0334 158.031 13.5759 172.327C21.1185 186.624 31.5297 199.211 44.1586 209.3C56.7874 219.39 71.3622 226.765 86.9715 230.965C102.581 235.165 118.889 236.099 134.875 233.708L127.204 182.401C118.275 183.736 109.168 183.214 100.45 180.869C91.7327 178.523 83.5928 174.404 76.5398 168.769C69.4867 163.134 63.6722 156.105 59.4598 148.12C55.2474 140.136 52.7277 131.368 52.0584 122.365C51.3891 113.363 52.5845 104.319 55.5699 95.7989C58.5553 87.2793 63.2664 79.4672 69.4087 72.8514C75.551 66.2355 82.9922 60.9581 91.2671 57.3493C99.542 53.7405 108.472 51.8778 117.5 51.8778V0Z"
-                  fill="url(#paint0_linear_17_1007)"
-                />
-                <path
-                  d="M119.5 0C136.993 -2.08599e-07 154.265 3.90573 170.055 11.4321C185.846 18.9585 199.757 29.9157 210.773 43.504C221.79 57.0922 229.633 72.9687 233.73 89.9746C237.828 106.981 238.077 124.687 234.46 141.801L184.66 131.274C186.711 121.574 186.569 111.538 184.247 101.898C181.924 92.2593 177.479 83.2604 171.235 75.5584C164.991 67.8565 157.106 61.6459 148.155 57.3799C139.205 53.1138 129.415 50.9 119.5 50.9V0Z"
-                  fill="url(#paint1_linear_17_1007)"
-                />
-                <path
-                  d="M236.594 141.157C231.664 165.143 219.363 186.989 201.411 203.643C183.458 220.296 160.752 230.925 136.464 234.043L129.924 183.111C143.598 181.355 156.381 175.372 166.488 165.996C176.594 156.621 183.519 144.322 186.295 130.818L236.594 141.157Z"
-                  fill="url(#paint2_linear_17_1007)"
-                />
-                <defs>
-                  <linearGradient
-                    id="paint0_linear_17_1007"
-                    x1="41.5"
-                    y1="92"
-                    x2="117.5"
-                    y2="235"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stop-color="#FB9C1A" />
-                    <stop offset="1" stop-color="#D75020" />
-                  </linearGradient>
-                  <linearGradient
-                    id="paint1_linear_17_1007"
-                    x1="119.5"
-                    y1="-5.03659e-06"
-                    x2="204"
-                    y2="60"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stop-color="#008D7A" />
-                    <stop offset="1" stop-color="#00A490" />
-                  </linearGradient>
-                  <linearGradient
-                    id="paint2_linear_17_1007"
-                    x1="239"
-                    y1="41.5"
-                    x2="137"
-                    y2="218.5"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop offset="0.573198" stop-color="#1F7EEC" />
-                    <stop offset="1" stop-color="#094A87" />
-                  </linearGradient>
-                </defs>
-              </svg>
-              <!-- Labeled layers within donut hole -->
+              <div id="doughnutChart"></div>
               <div class="donut-label">
                 <span class="label-sm">Buyers</span>
                 <span class="label-lg">48%</span>
@@ -519,81 +489,28 @@
             </div>
 
             <div class="volume-chart-container">
-              <div class="side-amount">
+              <!-- <div class="side-amount">
                 <span>120K</span>
                 <span>100K</span>
                 <span>80K</span>
                 <span>60K</span>
                 <span>40K</span>
                 <span>20K</span>
-              </div>
-              <div class="graph-display">
-                <svg
-                  class="area-chart"
-                  viewBox="0 0 500 150"
-                  preserveAspectRatio="none"
-                >
-                  <defs>
-                    <linearGradient id="cyan-area" x1="0" y1="0" x2="0" y2="1">
-                      <stop
-                        offset="0%"
-                        stop-color="#00f2fe"
-                        stop-opacity="0.3"
-                      />
-                      <stop
-                        offset="100%"
-                        stop-color="#00f2fe"
-                        stop-opacity="0.0"
-                      />
-                    </linearGradient>
-                    <linearGradient id="blue-area" x1="0" y1="0" x2="0" y2="1">
-                      <stop
-                        offset="0%"
-                        stop-color="#2265cf"
-                        stop-opacity="0.2"
-                      />
-                      <stop
-                        offset="100%"
-                        stop-color="#2265cf"
-                        stop-opacity="0.0"
-                      />
-                    </linearGradient>
-                  </defs>
-                  <!-- Purchase Area (Blue spline underneath) -->
-                  <path
-                    d="M 0,110 Q 120,40 240,110 T 480,60 L 500,80 L 500,150 L 0,150 Z"
-                    fill="url(#blue-area)"
-                  />
-                  <path
-                    d="M 0,110 Q 120,40 240,110 T 480,60 L 500,80"
-                    fill="none"
-                    stroke="#2265cf"
-                    stroke-width="2"
-                  />
-
-                  <!-- Sales Area (Cyan spline on top) -->
-                  <path
-                    d="M 0,125 Q 110,30 220,105 T 440,40 L 500,60 L 500,150 L 0,150 Z"
-                    fill="url(#cyan-area)"
-                  />
-                  <path
-                    d="M 0,125 Q 110,30 220,105 T 440,40 L 500,60"
-                    fill="none"
-                    stroke="#00f2fe"
-                    stroke-width="3"
-                  />
-                </svg>
-              </div>
+              </div> -->
+              <div class="graph-display" id="bottoMchart"></div>
             </div>
 
-            <div class="horizontal-months minified">
+            <!-- <div class="horizontal-months minified">
               <span>JAN</span><span>FEB</span><span>MAR</span><span>APR</span
               ><span>MAY</span><span>JUN</span><span>JUL</span><span>AUG</span
               ><span>SEP</span><span>OCT</span>
-            </div>
+            </div> -->
           </div>
         </section>
       </section>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="script.js"></script>
   </body>
 </html>
